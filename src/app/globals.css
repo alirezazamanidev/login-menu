@@ -2,32 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  font-family: "IranBakh";
+  direction: rtl;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* .custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-size: 1rem;
+} */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: "Rubik";
+  src: url("../../public/font/Rubik-Bold.woff") format("woff");
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@font-face {
+  font-family: "IranBakh";
+  src: url("../../public/font/YekanBakh-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "IranBakh_Heavy";
+  src: url("../../public/font/YekanBakh-Heavy.woff") format("woff");
+}
+@font-face {
+  font-family: "IranBakh-medium";
+  src: url("../../public/font/YekanBakh-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "IranBakh-Regular";
+  src: url("../../public/font/YekanBakh-Regular.woff") format("woff");
 }

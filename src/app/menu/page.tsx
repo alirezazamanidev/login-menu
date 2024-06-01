@@ -46,7 +46,7 @@ export default function page() {
   ];
   return (
     <div className=" text-white ">
-      <div className="w-1/4 h-full absolute  bg-red-700   text-opacity-100 bg-opacity-95  py-4">
+      <div className="lg:w-1/4 w-1/2 h-full absolute  bg-red-700   text-opacity-100 bg-opacity-95  py-4">
         <h1 className=" font-Rubik  text-center lg:text-3xl text-2xl">
           JAAP Media
         </h1>

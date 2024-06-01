@@ -80,7 +80,7 @@ export default function page() {
                   </svg>
                 </span>
               </summary>
-              <div className="  gap-2 px-8 flex text-sm flex-col justify-start items-start group-open:animate-fadeIn ">
+              <div className="  gap-2 px-14 flex text-sm flex-col justify-start items-start group-open:animate-fadeIn ">
                 {category.buttons.map((button, buttonIndex) => (
                   <button key={buttonIndex}>{button}</button>
                 ))}

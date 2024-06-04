@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Categories() {
   const users = [
     {
@@ -9,6 +11,7 @@ export default function Categories() {
       phone: "09124374411",
       date: "1398/2/5",
       status: "منقضی شده",
+      srcImage: "/image/home1.png",
     },
     {
       ads: "خودرو",
@@ -17,6 +20,7 @@ export default function Categories() {
       phone: "09114595588",
       date: "1402/2/5",
       status: "فعال ",
+      srcImage: "/image/vihcle.png",
     },
     {
       ads: "مسکن",
@@ -25,6 +29,7 @@ export default function Categories() {
       phone: "09124374411",
       date: "1398/2/5",
       status: "منقضی شده",
+      srcImage: "/image/home1.png",
     },
     {
       ads: "خودرو",
@@ -33,6 +38,7 @@ export default function Categories() {
       phone: "09114595588",
       date: "1402/2/5",
       status: "فعال ",
+      srcImage: "/image/vihcle.png",
     },
     {
       ads: "مسکن",
@@ -41,6 +47,7 @@ export default function Categories() {
       phone: "09124374411",
       date: "1398/2/5",
       status: "منقضی شده",
+      srcImage: "/image/home1.png",
     },
     {
       ads: "خودرو",
@@ -49,6 +56,7 @@ export default function Categories() {
       phone: "09114595588",
       date: "1402/2/5",
       status: "فعال ",
+      srcImage: "/image/vihcle.png",
     },
     {
       ads: "مسکن",
@@ -57,6 +65,7 @@ export default function Categories() {
       phone: "09124374411",
       date: "1398/2/5",
       status: "منقضی شده",
+      srcImage: "/image/home1.png",
     },
     {
       ads: "خودرو",
@@ -65,6 +74,7 @@ export default function Categories() {
       phone: "09114595588",
       date: "1402/2/5",
       status: "فعال ",
+      srcImage: "/image/vihcle.png",
     },
   ];
 
@@ -100,7 +110,17 @@ export default function Categories() {
                 key={index}
                 className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
               >
-                <td className="py-4 px-6">{user.ads}</td>
+                <td className="py-4 px-6 flex items-center">
+                  {" "}
+                  <Image
+                    src={user.srcImage}
+                    className=" "
+                    alt=""
+                    width={50}
+                    height={50}
+                  />
+                  {user.ads}
+                </td>
                 <td className="py-4 px-6">{user.adsTitle}</td>
                 <td className="py-4 px-6">{user.user}</td>
                 <td className="py-4 px-6">{user.phone}</td>

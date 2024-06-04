@@ -92,6 +92,9 @@ export default function Packages() {
               <th scope="col" className="py-3 px-6">
                 وضعیت
               </th>
+              <th scope="col" className="py-3 px-6">
+                عملیات
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -106,6 +109,14 @@ export default function Packages() {
                 <td className="py-4 px-6">{user.phone}</td>
                 <td className="py-4 px-6">{user.date}</td>
                 <td className="py-4 px-6">{user.status}</td>
+                <td className="py-4 px-6 gap-2 flex">
+                  <button className=" bg-blue-500 p-2 text-white rounded-xl hover:bg-blue-300">
+                    ویرایش
+                  </button>
+                  <button className=" bg-red-500 p-2 text-white rounded-xl hover:bg-red-300">
+                    نمایش
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>

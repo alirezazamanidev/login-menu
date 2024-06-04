@@ -92,6 +92,9 @@ export default function Ads() {
               <th scope="col" className="py-3 px-6">
                 وضعیت
               </th>
+              <th scope="col" className="py-3 px-6">
+                عملیات
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -106,6 +109,14 @@ export default function Ads() {
                 <td className="py-4 px-6">{user.phone}</td>
                 <td className="py-4 px-6">{user.date}</td>
                 <td className="py-4 px-6">{user.status}</td>
+                <td className="py-4 px-6 gap-2 flex">
+                  <button className=" bg-green-500 p-2 text-white rounded-xl hover:bg-green-300">
+                    تایید{" "}
+                  </button>
+                  <button className=" bg-red-500 p-2 w-10 text-white rounded-xl hover:bg-red-300">
+                    رد
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>

@@ -4,16 +4,16 @@ import * as Yup from "yup";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import Image from "next/image";
 
+// Adjusted validation schema
 const validationSchema = Yup.object({
-  name: Yup.string().required("نام اجباری میباشد"),
-  cv: Yup.string().required("انتخاب وضغیت رزومه اجباری میباشد"),
+  picture: Yup.mixed().nullable().required("بارگذاری تصویر اجباری است"),
 });
 
-export default function Category() {
+export default function Slider() {
   return (
     <div className="my-5 mx-4 flex flex-col ">
       <div className="flex flex-col text-center gap-5 z-10">
-        <h1 className="text-lg  font-IranBakhMedium">فرم ایجاد دسته بندی</h1>
+        <h1 className="text-lg  font-IranBakhMedium">فرم ایجاد اسلاید</h1>
       </div>
       <div className="mt-8 flex flex-col gap-3 w-full">
         <h1 className="text-sm ">کاربر گرامی لطفا موارد زیر را تکمیل نمایید</h1>
@@ -23,44 +23,24 @@ export default function Category() {
             description: "",
             isAvailable1: true,
             isAvailable2: true,
+            picture: null,
           }}
           validationSchema={validationSchema}
           onSubmit={(values, { setSubmitting }) => {
             setSubmitting(false);
           }}
         >
-          {({ setFieldValue, isSubmitting }) => (
+          {({ setFieldValue, isSubmitting, errors }) => (
             <Form className="flex flex-col gap-y-2 ">
               <div>
                 <Field
                   className="text-xs placeholder:text-black bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
                   type="text"
                   name="name"
-                  placeholder="نام"
-                />
-                <ErrorMessage
-                  name="name"
-                  className="text-red-600 text-xs font-medium mt-1"
-                  component="div"
+                  placeholder="url"
                 />
               </div>
-              <div>
-                <Field
-                  className="text-xs placeholder:text-black bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
-                  type="text"
-                  name="slog"
-                  placeholder="اسلاگ"
-                />
-              </div>
-              <div>
-                <Field
-                  className="placeholder:text-black rounded-md w-full h-24 bg-[#E9FFE7] text-xs  p-3"
-                  as="textarea"
-                  name="description"
-                  placeholder="توضیحات"
-                />
-              </div>
-              <div className="bg-[#E9FFE7] p-2   rounded-xl flex flex-col justify-between gap-4">
+              <div className="bg-[#E9FFE7] p-2 rounded-xl flex flex-col justify-between gap-4">
                 <label htmlFor="pictures" className="text-xs bg-[#E9FFE7]">
                   تصویر
                 </label>
@@ -79,15 +59,15 @@ export default function Category() {
                       />
                     </label>
                     <Field
-                      id="pictures"
-                      name="pictures"
+                      id="picture"
+                      name="picture"
                       type="file"
                       multiple
                       onChange={(
                         event: React.ChangeEvent<HTMLInputElement>
                       ) => {
                         if (event.currentTarget.files)
-                          setFieldValue("pictures", event.currentTarget.files);
+                          setFieldValue("picture", event.currentTarget.files);
                       }}
                       className="hidden file:border-0 file:bg-transparent text-transparent file:text-transparent"
                     />
@@ -104,39 +84,11 @@ export default function Category() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-full">
-                <Field
-                  as="select"
-                  name="category"
-                  className="custom-select  placeholder:text-black  rounded-md w-full h-14 bg-[#E9FFE7] text-xs  p-3 "
-                >
-                  <option value="" disabled selected>
-                    نوع دسته بندی (parent id)
-                  </option>
-                  <option value="yes">خودرو</option>
-                  <option value="no">آپارتمان </option>
-                  <option value="yes">بهداشتی</option>
-                  <option value="no">الکتریکی </option>
-                </Field>
-              </div>
-              <div className="w-full h-full">
-                <Field
-                  as="select"
-                  name="cv"
-                  className="custom-select  placeholder:text-black  rounded-md w-full h-14 bg-[#E9FFE7] text-xs  p-3 "
-                >
-                  <option value="" disabled selected>
-                    ارسال رزومه
-                  </option>
-                  <option value="yes">بله</option>
-                  <option value="no">خیر </option>
-                </Field>
-                <ErrorMessage
-                  name="cv"
-                  component="div"
-                  className="text-red-600 text-xs font-medium mt-1"
-                />
-              </div>
+              {errors.picture && (
+                <p className="text-red-600 text-xs font-medium mt-1">
+                  {errors.picture}
+                </p>
+              )}
               <button
                 type="submit"
                 disabled={isSubmitting}

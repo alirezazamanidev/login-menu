@@ -30,10 +30,16 @@ export default function Category() {
           }}
         >
           {({ setFieldValue, isSubmitting }) => (
-            <Form className="flex flex-col gap-y-2 ">
+            <Form className="flex flex-col gap-y-5 ">
               <div>
+                <label
+                  htmlFor="name"
+                  className="block  mb-1 text-base text-gray-700"
+                >
+                  نام:
+                </label>
                 <Field
-                  className="text-xs placeholder:text-black bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
+                  className="text-xs  bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
                   type="text"
                   name="name"
                   placeholder="نام"
@@ -45,24 +51,39 @@ export default function Category() {
                 />
               </div>
               <div>
+                <label
+                  htmlFor="slog"
+                  className="block  mb-1 text-base text-gray-700"
+                >
+                  اسلاگ:
+                </label>
                 <Field
-                  className="text-xs placeholder:text-black bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
+                  className="text-xs  bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
                   type="text"
                   name="slog"
                   placeholder="اسلاگ"
                 />
               </div>
               <div>
+                <label
+                  htmlFor="description"
+                  className="block  mb-1 text-base text-gray-700"
+                >
+                  توضیحات:
+                </label>
                 <Field
-                  className="placeholder:text-black rounded-md w-full h-24 bg-[#E9FFE7] text-xs  p-3"
+                  className=" rounded-md w-full h-24 bg-[#E9FFE7] text-xs  p-3"
                   as="textarea"
                   name="description"
                   placeholder="توضیحات"
                 />
               </div>
               <div className="bg-[#E9FFE7] p-2   rounded-xl flex flex-col justify-between gap-4">
-                <label htmlFor="pictures" className="text-xs bg-[#E9FFE7]">
-                  تصویر
+                <label
+                  htmlFor="pictures"
+                  className="text-base bg-[#E9FFE7] block  mb-1 mb-2"
+                >
+                  تصویر:
                 </label>
                 <div className="grid grid-cols-5 gap-2 bg-[#E9FFE7] ">
                   <div className="bg-zinc-500 rounded-xl flex justify-center">
@@ -94,21 +115,25 @@ export default function Category() {
                   </div>
                   <div className="col-span-1 flex gap-2">
                     {/* Placeholder images for uploaded pictures */}
-                    <Image
+                    <img
                       className="bg-[#0F360A] w-full h-fw-full flex rounded-xl"
                       width={200}
                       height={200}
-                      src=""
-                      alt=""
                     />
                   </div>
                 </div>
               </div>
               <div className="w-full h-full">
+                <label
+                  htmlFor="category"
+                  className="block  mb-1 text-base text-gray-700"
+                >
+                  نوع دسته بندی :
+                </label>
                 <Field
                   as="select"
                   name="category"
-                  className="custom-select  placeholder:text-black  rounded-md w-full h-14 bg-[#E9FFE7] text-xs  p-3 "
+                  className="custom-select    rounded-md w-full h-14 bg-[#E9FFE7] text-xs  p-3 "
                 >
                   <option value="" disabled selected>
                     نوع دسته بندی (parent id)
@@ -120,10 +145,16 @@ export default function Category() {
                 </Field>
               </div>
               <div className="w-full h-full">
+                <label
+                  htmlFor="cv"
+                  className="block  mb-1 text-base text-gray-700"
+                >
+                  ارسال رزومه:
+                </label>
                 <Field
                   as="select"
                   name="cv"
-                  className="custom-select  placeholder:text-black  rounded-md w-full h-14 bg-[#E9FFE7] text-xs  p-3 "
+                  className="custom-select    rounded-md w-full h-14 bg-[#E9FFE7] text-xs  p-3 "
                 >
                   <option value="" disabled selected>
                     ارسال رزومه

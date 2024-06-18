@@ -11,7 +11,7 @@ export default function page() {
       {/* <Users /> */}
       {/* <Ads /> */}
       {/* <Packages /> */}
-      <Categories />
+      {/* <Categories /> */}
       {/* <Sliders /> */}
     </div>
   );

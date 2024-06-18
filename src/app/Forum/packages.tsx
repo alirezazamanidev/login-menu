@@ -33,13 +33,20 @@ export default function Packages() {
           }}
         >
           {({ setFieldValue, isSubmitting }) => (
-            <Form className="flex flex-col gap-y-2 ">
+            <Form className="flex flex-col gap-y-4 ">
               <div>
+                <label
+                  htmlFor="title"
+                  className="block text-base text-gray-700  mb-1"
+                >
+                  عنوان:
+                </label>
                 <Field
-                  className="text-xs placeholder:text-black bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
+                  id="title"
+                  className="text-xs  bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
                   type="text"
                   name="title"
-                  placeholder="عنوان"
+                  placeholder="عنوان را وارد کنید"
                 />
                 <ErrorMessage
                   name="title"
@@ -48,11 +55,18 @@ export default function Packages() {
                 />
               </div>
               <div>
+                <label
+                  htmlFor="content"
+                  className="block text-base text-gray-700 mb-1"
+                >
+                  مضمون:
+                </label>
                 <Field
-                  className="text-xs placeholder:text-black bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
+                  id="content"
+                  className="text-xs  bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
                   type="text"
                   name="content"
-                  placeholder="مضمون"
+                  placeholder="مضمون را وارد کنید "
                 />
                 <ErrorMessage
                   name="content"
@@ -61,10 +75,17 @@ export default function Packages() {
                 />
               </div>
               <div className="w-full h-full">
+                <label
+                  htmlFor="category"
+                  className="block text-base text-gray-700 mb-1"
+                >
+                  نوع دسته بندی:
+                </label>
                 <Field
                   as="select"
+                  id="category"
                   name="category"
-                  className="custom-select  placeholder:text-black  rounded-md w-full h-14 bg-[#E9FFE7] text-xs  p-3 "
+                  className="custom-select    rounded-md w-full h-14 bg-[#E9FFE7] text-xs  p-3 "
                 >
                   <option value="" disabled selected>
                     نوع دسته بندی
@@ -81,11 +102,18 @@ export default function Packages() {
                 />
               </div>
               <div>
+                <label
+                  htmlFor="price"
+                  className="block text-base text-gray-700 mb-1"
+                >
+                  قیمت:
+                </label>
                 <Field
-                  className="text-xs placeholder:text-black bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
+                  id="price"
+                  className="text-xs  bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
                   type="number"
                   name="price"
-                  placeholder="قیمت"
+                  placeholder=" قیمت را وارد کنید"
                 />
                 <ErrorMessage
                   name="price"
@@ -94,8 +122,15 @@ export default function Packages() {
                 />
               </div>
               <div>
+                <label
+                  htmlFor="time"
+                  className="block text-base text-gray-700 mb-1"
+                >
+                  زمان:
+                </label>
                 <Field
-                  className="text-xs placeholder:text-black bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
+                  id="time"
+                  className="text-xs  bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
                   type="text"
                   name="time"
                   placeholder="زمان"
@@ -107,10 +142,17 @@ export default function Packages() {
                 />
               </div>
               <div className="w-full h-full">
+                <label
+                  htmlFor="packagetype"
+                  className="block text-base text-gray-700 mb-1"
+                >
+                  نوع پکیج:
+                </label>
                 <Field
                   as="select"
+                  id="packagetype"
                   name="packagetype"
-                  className="custom-select  placeholder:text-black  rounded-md w-full h-14 bg-[#E9FFE7] text-xs  p-3 "
+                  className="custom-select    rounded-md w-full h-14 bg-[#E9FFE7] text-xs  p-3 "
                 >
                   <option value="" disabled selected>
                     نوع پکیج

@@ -6,9 +6,9 @@ import Packages from "./packages";
 export default function page() {
   return (
     <div>
-      {/* <Category /> */}
+      <Category />
       {/* <Slider /> */}
-      <Packages />
+      {/* <Packages /> */}
     </div>
   );
 }

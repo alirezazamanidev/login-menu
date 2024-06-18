@@ -31,30 +31,39 @@ export default function Slider() {
           }}
         >
           {({ setFieldValue, isSubmitting, errors }) => (
-            <Form className="flex flex-col gap-y-2 ">
+            <Form className="flex flex-col gap-y-5 ">
               <div>
+                <label
+                  htmlFor="name"
+                  className="block text-base text-gray-700 mb-1"
+                >
+                  URL:
+                </label>
                 <Field
-                  className="text-xs placeholder:text-black bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
+                  className="text-xs  bg-[#E9FFE7]  px-3 rounded-md w-full h-14"
                   type="text"
                   name="name"
                   placeholder="url"
                 />
               </div>
               <div className="bg-[#E9FFE7] p-2 rounded-xl flex flex-col justify-between gap-4">
-                <label htmlFor="pictures" className="text-xs bg-[#E9FFE7]">
-                  تصویر
+                <label
+                  htmlFor="picture"
+                  className="text-xs bg-[#E9FFE7] block mb-2"
+                >
+                  تصویر:
                 </label>
                 <div className="grid grid-cols-5 gap-2 bg-[#E9FFE7] ">
                   <div className="bg-zinc-500 rounded-xl flex justify-center">
                     <label
-                      htmlFor="pictures"
-                      className="flex justify-center items-center bg-zinc-500  "
+                      htmlFor="picture"
+                      className="flex justify-center items-center bg-zinc-500 cursor-pointer"
                     >
                       <Image
                         src="/icons/download.svg"
-                        alt=""
+                        alt="Upload Icon"
                         width={20}
-                        height={0}
+                        height={20}
                         className="bg-zinc-500 "
                       />
                     </label>
@@ -74,12 +83,10 @@ export default function Slider() {
                   </div>
                   <div className="col-span-1 flex gap-2">
                     {/* Placeholder images for uploaded pictures */}
-                    <Image
-                      className="bg-[#0F360A] w-full h-fw-full flex rounded-xl"
+                    <img
+                      className="bg-[#0F360A] w-full h-full flex rounded-xl"
                       width={200}
                       height={200}
-                      src=""
-                      alt=""
                     />
                   </div>
                 </div>
@@ -92,7 +99,7 @@ export default function Slider() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className=" bg-slate-400 hover:bg-slate-500 p-3 rounded-xl  items-center gap-2    justify-end   text-sm  hover:font-thin "
+                className="bg-slate-400 hover:bg-slate-500 p-3 rounded-xl items-center gap-2 justify-end text-sm hover:font-thin"
               >
                 ثبت
               </button>

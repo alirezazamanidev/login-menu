@@ -16,7 +16,7 @@ const validationSchema = Yup.object({
 export default function Login() {
   return (
     <div className=" flex justify-center ">
-      <div className="  flex flex-col gap-2 my-28 lg:w-3/12  w-full mx-4   ">
+      <div className="  flex flex-col gap-2 my-28 lg:w-3/12  w-full mx-4  bg-[#E9FFE7] p-4 rounded-xl  ">
         <h1 className=" flex justify-center  font-IranBakh_Heavy  text-lg">
           ورد به پنل کاربری
         </h1>

@@ -26,8 +26,8 @@ function ShowAds() {
   }, [dropdownRef]);
 
   return (
-    <div className=" flex justify-center min-h-screen from-purple-200 via-purple-300 to-purple-500 bg-gradient-to-br ">
-      <div className="  w-2/5   mt-5 flex flex-col gap-4    ">
+    <div className=" flex justify-center min-h-screen  ">
+      <div className="     mt-5 flex flex-col gap-4    ">
         <div className="bg-[#FFFFFF] rounded-lg mx-4 flex flex-col gap-2  ">
           <div className=" flex justify-between p-2">
             <h1 className=" text-base   ">لورم ایپسوم یک متن ساختگی </h1>

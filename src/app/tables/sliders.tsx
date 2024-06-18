@@ -69,7 +69,7 @@ export default function Sliders() {
   ];
 
   return (
-    <div className="flex min-h-screen truncate items-baseline justify-center from-purple-200 via-purple-300 to-purple-500 bg-gradient-to-br">
+    <div className="flex min-h-screen truncate items-baseline justify-center ">
       <div className="overflow-x-auto relative shadow-md rounded-lg m-2 lg:m-10">
         <table className="w-full  text-sm text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">

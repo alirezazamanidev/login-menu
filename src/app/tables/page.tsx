@@ -12,7 +12,7 @@ export default function page() {
       {/* <Ads /> */}
       {/* <Packages /> */}
       {/* <Categories /> */}
-      {/* <Sliders /> */}
+      <Sliders />
     </div>
   );
 }
